@@ -1,15 +1,15 @@
 {
   "name": "n8n-nodes-blaq-list",
-  "version": "1.0.0",
-  "description": "n8n node for BlaqList functionality",
+  "version": "0.1.0",
+  "description": "n8n node for BLAQList",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Code",
+    "email": "code@blaqreports.com"
   },
   "repository": {
     "type": "git",
