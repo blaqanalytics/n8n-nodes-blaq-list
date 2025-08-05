@@ -122,6 +122,7 @@ dist
 # Build output
 build/
 lib/
+dev/
 
 # IDE files
 .vscode/

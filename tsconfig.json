@@ -1,25 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es2022",
-    "module": "commonjs",
-    "lib": ["es2022"],
     "declaration": true,
-    "outDir": "./dist",
-    "rootDir": "./",
-    "removeComments": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
+    "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "incremental": false,
+    "lib": ["es2019", "es2020", "es2022.error"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "rootDir": "./",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "es2019"
   },
-  "include": ["credentials/**/*", "nodes/**/*"],
-  "exclude": ["dist", "node_modules", "**/*.js"]
+  "include": [
+    "credentials/**/*",
+    "nodes/**/*",
+    "package.json"
+  ]
 }

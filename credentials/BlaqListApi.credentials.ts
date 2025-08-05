@@ -1,27 +1,30 @@
-import {
-  ICredentialType,
-  INodeProperties,
-} from 'n8n-workflow';
+import type { ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class BlaqListApi implements ICredentialType {
+  displayName = 'BLAQ List API';
+  documentationUrl = 'https://docs.blaqreports.com/blaq_list';
   name = 'blaqListApi';
-  displayName = 'BLAQList API';
+
   properties: INodeProperties[] = [
     {
-      displayName: 'API Token',
-      name: 'apiToken',
-      type: 'string',
-      typeOptions: { password: true },
       default: '',
+      description: 'BLAQ List API Access Token',
+      displayName: 'Token',
+      name: 'token',
+      required: true,
+      type: 'string',
+      typeOptions: {
+        password: true
+      },
     },
   ];
 
   authenticate = {
-    type: 'generic' as const,
     properties: {
       headers: {
-        Authorization: '=Bearer {{$credentials.apiToken}}',
+        Authorization: '=Bearer {{$credentials.token}}',
       },
     },
+    type: 'generic' as const,
   };
 }
